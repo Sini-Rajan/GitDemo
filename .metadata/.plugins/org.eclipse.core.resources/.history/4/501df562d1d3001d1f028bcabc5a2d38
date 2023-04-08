@@ -1,0 +1,40 @@
+// Java Program to Count Even Numbers in an Array using For Loop
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class CountEven {
+	private static Scanner sc;
+	public static void main(String[] args) 
+	{
+		int Size, i, evenCount = 0;
+		sc = new Scanner(System.in);
+	 
+		System.out.print(" Please Enter Number of elements in an array : ");
+		Size = sc.nextInt();	
+		ArrayList<Integer> a = new ArrayList<Integer>(Size);
+		//int [] a = new int[Size];
+		
+		for (i = 1; i <= Size; i++){
+            a.add(i);
+        }
+
+		System.out.println("Array 1:"+a);
+		
+		System.out.print(" Please Enter " + Size + " elements of an Array  : ");
+		for (i = 0; i < Size; i++)
+		{
+			a.add(sc.nextInt());  
+			//a[i] = sc.nextInt();
+		}
+//		System.out.print("\n List of Even Numbers in this Array are :"); 
+//		for(i = 0; i < Size; i++)
+//		{
+//			if(a[i] % 2 == 0)
+//			{
+//				System.out.print(a[i] +" ");
+//				evenCount++;
+//			}
+//		}		
+//		System.out.println("\n Total Number of Even Numbers in this Array = " + evenCount);
+	}
+}

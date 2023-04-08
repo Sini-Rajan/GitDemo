@@ -1,0 +1,24 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import java.time.Duration;
+
+public class LinkedinLogin {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		WebDriver driver = new FirefoxDriver() ;
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get("https://in.linkedin.com/");
+		driver.findElement(By.xpath("(//input[@id='session_key'])")).sendKeys("mail2sinirajan@gmail.com");
+		driver.findElement(By.xpath("//input[@id='session_password']")).sendKeys("Mine$188");
+		driver.findElement(By.className("sign-in-form__submit-button")).click();
+		driver.findElement(By.className("mercado-match")).click();
+		
+				
+		
+
+	}
+
+}
